@@ -9,13 +9,13 @@ public static void main()throws IOException
     System.out.print("enter name if want to else enter *  ");
     String str,s;
     str=br.readLine();
-    int income,i;
+    double income,i;
     while(!(str.equalsIgnoreCase("")))
     { 
         System.out.print("Enter the income  ");
         income=Integer.parseInt(br.readLine());
         ds.writeUTF(str);
-        ds.writeInt(income);
+        ds.writeDouble(income);
         System.out.print("enter name if want to else enter *  ");
         str=br.readLine();
     }
@@ -32,11 +32,11 @@ public static void main()throws IOException
         try
         {
         s=di.readUTF();
-        i=di.readInt();
+        i=di.readDouble();
         if(i>100000)
         {
            dos.writeUTF(s);
-           dos.writeInt(i);
+           dos.writeDouble(i);
         System.out.print(s+" is name and taxable income="+i);
        }}
         catch(EOFException e1)
